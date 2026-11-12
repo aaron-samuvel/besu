@@ -98,7 +98,7 @@ public class DebugAccountRange implements JsonRpcMethod {
     return blockchainQueries
         .get()
         .getAndMapWorldState(
-            blockHeaderOptional.get().getNumber(),
+            blockHash,
             state -> {
               final List<StreamableAccount> accounts =
                   state
